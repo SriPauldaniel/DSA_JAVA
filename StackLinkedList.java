@@ -1,6 +1,7 @@
 import java.util.*;
 public class StackLinkedList {
 
+    //Creation of node ...
     static  class Node {
         int value;
         Node next;
@@ -10,6 +11,7 @@ public class StackLinkedList {
         }
     }
 
+    //Creatind a stack with the nodes
     static Node top;
     static int height;
     static class Stack {
@@ -20,6 +22,7 @@ public class StackLinkedList {
         }
     }
 
+    //Push method to insert the element into stack
     static void push(int value) {
         Node newNode = new Node(value);
         if(height == 0) {
@@ -32,6 +35,7 @@ public class StackLinkedList {
         height++;
     }
 
+    //Pop method to delete a element from the stack
     static Node pop() {
         if(height == 0) {
             return null;
@@ -47,7 +51,7 @@ public class StackLinkedList {
         return top;
     }
 
-
+    //Displaying stack in terms of Linked List
     static void display() {
         Node temp = top;
         while(temp != null) {
@@ -55,6 +59,8 @@ public class StackLinkedList {
             temp = temp.next;
         }
     }
+
+    //Case conditions for performing Stack operations
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         boolean flag = true;
